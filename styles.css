@@ -103,4 +103,32 @@ nav ul li a:hover {
   input[type="submit"]:hover {
     background-color: #0056b3;
   }
-  
+  /* CSS */
+#copyright {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+#call {
+  position: absolute;
+  bottom: 0%;
+  left: 35%;
+}
+
+#write {
+  position: absolute;
+  bottom: 0%;
+  left: 65%;
+}
+
+#follow {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
+
+#follow .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
