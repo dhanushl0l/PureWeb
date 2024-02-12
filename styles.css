@@ -133,7 +133,7 @@ input[type="submit"]:hover {
 }
 
   footer {
-    position: fixed;
+    position: unset;
     width: 100%;
     background-color: rgb(255, 255, 255); /* Background color */
     padding: 20px 0; /* Adjust padding as needed */
