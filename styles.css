@@ -19,6 +19,7 @@ header {
 
 nav ul {
     list-style-type: none;
+    font-weight: bold; /* Bold text */
     margin: 0;
     padding: 0;
 }
@@ -64,7 +65,10 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+    max-width: 600px; /* Set the maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
   
   .form-group {
     margin-bottom: 20px;
@@ -76,21 +80,52 @@ nav ul li a:hover {
     margin-bottom: 5px;
   }
   
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* For normal state */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 10px); /* Adjust width to account for padding */
+    padding: 5px 0;
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
     box-sizing: border-box;
-  }
-  
-  textarea {
-    height: 150px;
-  }
-  
-  input[type="submit"] {
+    margin-bottom: 10px; /* Add some space between input fields */
+}
+
+/* For hover and focus states */
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-bottom-color: blue; /* Change bottom border color to blue on hover and focus */
+}
+
+/* For error state */
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+textarea:invalid {
+    border-bottom-color: rgb(131, 131, 131); /* Change bottom border color to red when there is an error */
+}
+
+/* Disable resizing of textarea */
+textarea {
+    resize: none;
+}
+
+/* For first name and last name in same line */
+#fname,
+#lname {
+    display: inline-block;
+    width: calc(50% - 5px); /* Set width to half of the container minus 5px for spacing */
+    vertical-align: top; /* Align elements to the top of the line */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin-right: 10px; /* Add some space between the input fields */
+}
+
+/* Button styling */
+input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -98,37 +133,39 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+  footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255); /* Background color */
+    padding: 20px 0; /* Adjust padding as needed */
+    bottom: 0;
+    z-index: 999; /* Ensure footer stays above other content */
+    text-align: center; /* Align footer content center */
   }
   
-  input[type="submit"]:hover {
-    background-color: #0056b3;
+  .footer-content {
+    display: inline-block;
+    vertical-align: middle; /* Align content vertically */
+    width: 30%;
+    color: black; /* Text color */
   }
-  /* CSS */
-#copyright {
-  position: absolute;
-  bottom: 0px;
-  left: 20px;
-}
-
-#call {
-  position: absolute;
-  bottom: 0%;
-  left: 35%;
-}
-
-#write {
-  position: absolute;
-  bottom: 0%;
-  left: 65%;
-}
-
-#follow {
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-}
-
-#follow .social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-}
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    display: inline-block;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
