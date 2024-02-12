@@ -13,7 +13,7 @@ header {
 }
 
 .logo {
-    color: #333; /* Dark text color */
+    color: #000000; /* Dark text color */
     font-weight: bold; /* Bold text */
 }
 
@@ -31,7 +31,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333; /* Dark text color */
+    color: #000000; /* Dark text color */
 }
 
 nav ul li a:hover {
@@ -40,7 +40,6 @@ nav ul li a:hover {
 
 .section {
     margin-top: 20px;
-    padding: 20px;
     border-top: 1px solid #ccc;
     display: none;
 }
@@ -51,10 +50,14 @@ nav ul li a:hover {
 
 /* Center part background color */
 .container {
-    background-color: rgb(230, 218, 206);
-    padding: 20px;
-    border-radius: 10px;
-  }
+  background-color: rgb(230, 218, 206);
+  padding: 30px;
+  border-radius: 0px;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
   
   .contact-heading {
     text-align: center;
@@ -112,16 +115,6 @@ textarea:invalid {
 /* Disable resizing of textarea */
 textarea {
     resize: none;
-}
-
-/* For first name and last name in same line */
-#fname,
-#lname {
-    display: inline-block;
-    width: calc(50% - 5px); /* Set width to half of the container minus 5px for spacing */
-    vertical-align: top; /* Align elements to the top of the line */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-    margin-right: 10px; /* Add some space between the input fields */
 }
 
 /* Button styling */
