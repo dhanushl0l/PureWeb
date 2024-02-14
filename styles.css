@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 header {
@@ -78,6 +78,95 @@ a.about-me p {
   margin-left: 0px; /* Add a left margin of 20 pixels */
 }
 
+.about-button-1 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 255);
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 120px;
+    will-change: transform;
+  }
+  
+  .about-button-1:disabled {
+    pointer-events: none;
+  }
+  
+  .about-button-1:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .about-button-1:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.about-button-2 {
+    appearance: none;
+    background-color: rgb(0, 0, 255);
+    border: 2px solid rgb(0, 0, 255);
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 100%;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 120px;
+    will-change: transform;
+  }
+  
+  .about-button-2:disabled {
+    pointer-events: none;
+  }
+  
+  .about-button-2:hover {
+    color: #000000;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .about-button-1:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
 .name {
   font-size:30px; /* Set the font size to 10px */
   position: absolute; /* Position the element absolutely */
@@ -116,7 +205,7 @@ a.about-me p {
 }
 
 .square-box-right-box {
-  width: 1000px; /* Set the initial width */
+  width: 1100px; /* Set the initial width */
   height: 378px; /* Set the initial height */
   position: absolute; /* Position absolutely */
   top: 50%; /* Align to the vertical center */
@@ -140,7 +229,7 @@ a.about-me p {
   height: 378px; /* Set the initial height */
   position: absolute; /* Position absolutely */
   top: 50%; /* Align to the vertical center */
-  left: 67%; /* Align to the horizontal center */
+  left: 63%; /* Align to the horizontal center */
   transform: translate(-50%, -50%);
 }
 
