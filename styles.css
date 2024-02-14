@@ -62,6 +62,22 @@ nav ul li a:hover {
   object-fit: cover; /* Ensure the image covers the entire circle */
 }
 
+a.hello p {
+  font-size: 100px; /* Change the font size to 24 pixels */
+  font-weight: bold; /* Make the text bold */
+  font-family: Arial, sans-serif; /* Change the font family to Arial or a generic sans-serif font */
+  margin-top: 0px; /* Add a top margin of 10 pixels */
+  margin-left: 0px; /* Add a left margin of 20 pixels */
+}
+
+a.about-me p {
+  font-size:20px; /* Change the font size to 24 pixels */
+  font-weight: bold; /* Make the text bold */
+  font-family: Arial, sans-serif; 
+  margin-top: -100px; /* Add a top margin of 10 pixels */
+  margin-left: 0px; /* Add a left margin of 20 pixels */
+}
+
 .name {
   font-size:30px; /* Set the font size to 10px */
   position: absolute; /* Position the element absolutely */
@@ -267,7 +283,7 @@ footer {
     width: 300px; /* Set the initial width */
     height: 378px; /* Set the initial height */
     position: absolute; /* Position absolutely */
-    top: 81%; /* Align to the vertical center */
+    top: 100%; /* Align to the vertical center */
     left: 50%; /* Align to the horizontal center */
     transform: translate(-50%, -50%); /* Center the box */
     mix-blend-mode: multiply; /* Apply blend mode */
@@ -275,10 +291,10 @@ footer {
   
   
   .square-box {
-    width: 300px; /* Set the initial width */
-    height: 378px; /* Set the initial height */
+    width: 370px; /* Set the initial width */
+    height: 480px; /* Set the initial height */
     position: absolute; /* Position absolutely */
-    top: 28%; /* Align to the vertical center */
+    top: 33%; /* Align to the vertical center */
     left: 50%; /* Align to the horizontal center */
     transform: translate(-50%, -50%); /* Adjust for centering */
   }
@@ -292,7 +308,7 @@ footer {
 }
 
 .about-section .container {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(230, 206, 206) 10%);
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232,220,204) 10%);
   border-radius: 0;
   right: 0;
   min-height: 100vh;
