@@ -4,19 +4,23 @@ body {
     font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-header {
-    background-color: #fff; /* White background */
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header { 
+  display: flex;           /* Enable flexbox for the header */
+  justify-content: space-between; /* Items placed at start and end */
+  align-items: center;    
 }
 
-.logo {
+.title {
     color: #000000; /* Dark text color */
-    font-weight: bold; /* Bold text */
+    display: absolute;
+    font-weight: bold; 
+    right: 20px;
 }
 
+.section-s {
+  padding-top: 25px;   /* Example: Add 15 pixels of top padding */
+  padding-bottom: 20px; /* Example: Add 10 pixels of bottom padding */
+}
 nav ul {
     list-style-type: none;
     font-weight: bold; /* Bold text */
