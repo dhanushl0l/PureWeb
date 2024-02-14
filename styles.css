@@ -4,12 +4,36 @@ body {
     font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-header { 
-  display: flex;           /* Enable flexbox for the header */
-  justify-content: space-between; /* Items placed at start and end */
-  align-items: center;    
+header {
+  display: flex;           
+  justify-content: space-between; 
+  align-items: center;  
+  padding: 10px 0; /* 10px of padding on the top and bottom */
+}
+  
+h2{
+  font-size: 1.5em ;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+h2 span{
+  transition: 0.5s;
+}
+h2:hover span:nth-child(1):after {
+  content: "";
+}
+h2:hover span:nth-child(2):after {
+  content: " THE DEVELOPER";
 }
 
+h2:hover span:nth-child(1){
+  margin-left: 4cqi;
+}
+h2:hover span{
+  color: #000000;
+}
 .title {
     color: #000000; /* Dark text color */
     display: absolute;
@@ -17,29 +41,25 @@ header {
     right: 20px;
 }
 
-.section-s {
-  padding-top: 25px;   /* Example: Add 15 pixels of top padding */
-  padding-bottom: 20px; /* Example: Add 10 pixels of bottom padding */
-}
 nav ul {
-    list-style-type: none;
-    font-weight: bold; /* Bold text */
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  font-weight: bold; /* Bold text */
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+  display: inline;
+  margin-right: 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #000000; /* Dark text color */
+  text-decoration: none;
+  color: #000000; /* Dark text color */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .section {
