@@ -39,8 +39,6 @@ nav ul li a:hover {
 }
 
 .section {
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
     display: none;
 }
 
@@ -48,10 +46,42 @@ nav ul li a:hover {
     display: block;
 }
 
+.circle {
+  position: absolute; /* Position absolutely */
+  top: 10%; /* Align to the vertical center */
+  left: 23%;
+  width: 200px; /* Set the width and height to create a circle */
+  height: 200px;
+  border-radius: 50%; /* Make it a circle */
+  overflow: hidden; /* Clip the image to the circle */
+}
+
+.circle img {
+  width: 100%; /* Make the image fill the circle */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire circle */
+}
+
+.name {
+  font-size:30px; /* Set the font size to 10px */
+  position: absolute; /* Position the element absolutely */
+  top: 55%; /* Position it at the vertical center */
+  left: 50%; /* Position it at the horizontal center */
+  transform: translate(-50%, -50%); /* Center it precisely */
+}
+
+.role {
+  font-size:18px; /* Set the font size to 10px */
+  position: absolute; /* Position the element absolutely */
+  top: 80%; /* Position it at the vertical center */
+  left: 50%; /* Position it at the horizontal center */
+  transform: translate(-50%, -50%); /* Center it precisely */
+}
+
 /* Center part background color */
+
 .container {
-  background-color: rgb(230, 206, 206);
-  padding: 30px;
+  background-color: rgb(232,220,204);
   border-radius: 0px;
   width: 100vw; /* Full width of the viewport */
   height: 100vh; /* Full height of the viewport */
@@ -60,7 +90,7 @@ nav ul li a:hover {
 
 
 .about-section .container {
-  background-color: rgb(230, 206, 206); /* Change background color */
+  background-color: rgb(232,220,204); /* Change background color */
   border-radius: 0px;
   right: 0; /* Align to the right */
   width: 45vw; /* 50% of the viewport width */
@@ -77,14 +107,15 @@ nav ul li a:hover {
   left: 50%; /* Align to the horizontal center */
   transform: translate(-50%, -50%);
 }
+
 .square-box {
-  width: 300px; /* Set the initial width */
-  height: 378px; /* Set the initial height */
-  background-color: rgb(244, 236, 230); /* Set the background color */
+  width: 370px; /* Set the initial width */
+  height: 480px; /* Set the initial height */
+  background-color: rgba(244,236,230,255);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
   position: absolute; /* Position absolutely */
-  top: 50%; /* Align to the vertical center */
-  left: 35%; /* Align to the horizontal center */
+  top: 55%; /* Align to the vertical center */
+  left: 30%; /* Align to the horizontal center */
   transform: translate(-50%, -50%); /* Adjust for centering */
 }
 
@@ -93,8 +124,37 @@ nav ul li a:hover {
   height: 378px; /* Set the initial height */
   position: absolute; /* Position absolutely */
   top: 50%; /* Align to the vertical center */
-  left: 69%; /* Align to the horizontal center */
+  left: 67%; /* Align to the horizontal center */
   transform: translate(-50%, -50%);
+}
+
+.social-icons-in-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons-in-square .icon {
+  width: 25px;
+  height: 25px;
+  margin: 10px 20px;
+  transition: transform 0.3s; /* Smooth transition for the hover effect */
+}
+
+.social-icons-in-square .icon:hover {
+  transform: scale(1.3); /* Increase the size of the icon on hover */
+}
+
+
+.square-for-icons {
+  width: 370px; /* Set the initial width */
+  height: 50px; /* Set the initial height */
+  background-color: rgb(255, 255, 255); /* Set the background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  position: absolute; /* Position absolutely */
+  top:105%; /* Align to the vertical center */
+  left: 50%; /* Align to the horizontal center */
+  transform: translate(-50%, -50%); /* Adjust for centering */
 }
 
   .contact-heading {
@@ -238,5 +298,4 @@ footer {
   min-height: 100vh;
   width: 100%;
 }
-
 }
