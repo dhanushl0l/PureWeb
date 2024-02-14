@@ -11,34 +11,42 @@ header {
   padding: 10px 0; /* 10px of padding on the top and bottom */
 }
   
-h2{
-  font-size: 1.5em ;
+h1 {
+  font-size: 1.5em;
   font-weight: 500;
   color: #222;
   letter-spacing: 5px;
   cursor: pointer;
 }
-h2 span{
+
+h1 span {
   transition: 0.5s;
 }
-h2:hover span:nth-child(1):after {
+
+h1:hover span:nth-child(1):after {
   content: "";
 }
-h2:hover span:nth-child(2):after {
+
+h1:hover span:nth-child(1):after {
   content: " THE DEVELOPER";
 }
 
-h2:hover span:nth-child(1){
-  margin-left: 4cqi;
+h1:hover span:nth-child(1) {
+  margin-left: 4px;
 }
-h2:hover span{
+
+h1:hover span:nth-child(2) {
+  display: none; 
+}
+h1:hover span:nth-child(0) {
+  display: none; 
+}
+h1:hover span:nth-child(3) {
+  opacity: 0;
+}
+
+h1:hover span {
   color: #000000;
-}
-.title {
-    color: #000000; /* Dark text color */
-    display: absolute;
-    font-weight: bold; 
-    right: 20px;
 }
 
 nav ul {
@@ -84,6 +92,15 @@ nav ul li a:hover {
   width: 100%; /* Make the image fill the circle */
   height: 100%;
   object-fit: cover; /* Ensure the image covers the entire circle */
+}
+
+.line {
+  position: absolute;
+  margin-top: 350px; /* Add a top margin of 10 pixels */
+  transform: translateX(280%);
+  width: 15%;
+  height: 3px;
+  background-color: blue;
 }
 
 a.hello p {
@@ -219,43 +236,42 @@ a.about-me p {
 
 
 .about-section .container {
-  background-color: rgb(232,220,204); /* Change background color */
+  background-color: rgb(232,220,204);
   border-radius: 0px;
-  right: 0; /* Align to the right */
-  width: 45vw; /* 50% of the viewport width */
-  height: 100vh; /* Full height of the viewport */
-  box-sizing: border-box; /* Ensure padding is included in the width and height */
-  right: 0; /* Align to the right */
+  width: 45vw;
+  height: 900px;
+  box-sizing: border-box;
 }
 
 .square-box-right-box {
-  width: 1100px; /* Set the initial width */
-  height: 378px; /* Set the initial height */
-  position: absolute; /* Position absolutely */
-  top: 50%; /* Align to the vertical center */
-  left: 50%; /* Align to the horizontal center */
+  width: 1100px;
+  height: 378px;
+  position: absolute;
+  top: 500px;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .square-box {
-  width: 370px; /* Set the initial width */
-  height: 480px; /* Set the initial height */
+  width: 370px;
+  height: 480px;
   background-color: rgba(244,236,230,255);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-  position: absolute; /* Position absolutely */
-  top: 55%; /* Align to the vertical center */
-  left: 30%; /* Align to the horizontal center */
-  transform: translate(-50%, -50%); /* Adjust for centering */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
 .right-box {
-  width: 300px; /* Set the initial width */
-  height: 378px; /* Set the initial height */
-  position: absolute; /* Position absolutely */
-  top: 50%; /* Align to the vertical center */
-  left: 63%; /* Align to the horizontal center */
+  width: 300px;
+  height: 378px;
+  position: absolute;
+  top: 50%;
+  left: 63%;
   transform: translate(-50%, -50%);
 }
+
 
 .social-icons-in-square {
   display: flex;
@@ -396,7 +412,7 @@ footer {
     width: 300px; /* Set the initial width */
     height: 378px; /* Set the initial height */
     position: absolute; /* Position absolutely */
-    top: 110%; /* Align to the vertical center */
+    top: 120%; /* Align to the vertical center */
     left: 50%; /* Align to the horizontal center */
     transform: translate(-50%, -50%); /* Center the box */
     mix-blend-mode: multiply; /* Apply blend mode */
@@ -407,15 +423,15 @@ footer {
     width: 370px; /* Set the initial width */
     height: 480px; /* Set the initial height */
     position: absolute; /* Position absolutely */
-    top: 43%; /* Align to the vertical center */
+    top: 46%; /* Align to the vertical center */
     left: 50%; /* Align to the horizontal center */
     transform: translate(-50%, -50%); /* Adjust for centering */
   }
   .square-box-right-box {
     width: 300px; /* Set the initial width */
     height: 756px; /* Set the initial height */
-    position: absolute; /* Position absolutely */
-    top: 45%; /* Align to the vertical center */
+    position: absolute;
+    top: 400px; /* Align to the vertical center */
     left: 50%; /* Align to the horizontal center */
     transform: translate(-50%, -50%);
 }
@@ -424,7 +440,41 @@ footer {
   background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232,220,204) 10%);
   border-radius: 0;
   right: 0;
-  min-height: 130vh;
   width: 100%;
+  height: 1100px; 
+  box-sizing: border-box; 
+}
+.nav-item{
+  display: none;
+}
+footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px; /* Adjust icon width as needed */
+  height: 20px; /* Adjust icon height as needed */
+}
+
+.social-icons img {
+  width: 100%; /* Make sure the icon fills its container */
+  height: auto; /* Maintain aspect ratio */
 }
 }
