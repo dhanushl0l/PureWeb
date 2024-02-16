@@ -12,6 +12,7 @@ header {
 }
   
 h1 {
+  margin-left: 10px;
   font-size: 1.5em;
   font-weight: 500;
   color: #222;
@@ -32,7 +33,7 @@ h1:hover span:nth-child(1):after {
 }
 
 h1:hover span:nth-child(1) {
-  margin-left: 4px;
+  margin-left: 15px;
 }
 
 h1:hover span:nth-child(2) {
@@ -308,11 +309,7 @@ a.about-me p {
   
   .contact-form-container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Set the maximum width */
-    margin: 0 auto; /* Center the container horizontally */
+
 }
 
   
@@ -326,6 +323,165 @@ a.about-me p {
     margin-bottom: 5px;
   }
   
+  /* resuume */
+  .resume.container {
+    background-color: rgb(232, 220, 204);
+    position: fixed;
+    top: 80px; /* Adjust this value to match your header height */
+    bottom: 60px; /* Adjust this value to match your footer height */
+    left: 0;
+    right: 0;
+    overflow: auto; /* Enable scrolling if content exceeds container height */
+}
+
+
+.container-job {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  height: 250px;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 20vw;
+  border-radius: 10px; /* Add a slight curve */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  transition: box-shadow 0.3s, transform 0.3s; /* Add transition for smooth effect */
+}
+
+.container-job:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+  transform: translateY(-5px); /* Move the element up slightly on hover */
+}
+
+
+.container-education {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  position: absolute;
+  margin-top: 450px;
+  height: 250px;
+  margin-left: 20vw;
+  border-radius: 10px; /* Add a slight curve */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  transition: box-shadow 0.3s, transform 0.3s; 
+}
+
+.container-education:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+  transform: translateY(-5px); /* Move the element up slightly on hover */
+}
+
+.side-heading {
+    font-weight: bold;
+    margin-bottom: 50vw;
+}
+
+.container-d-side {
+  width: 60%;
+  position: absolute;
+  margin-top: 80px;
+  height: 40px;
+  margin-left: 20vw;
+}
+
+.download-btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.download-btn:disabled {
+  pointer-events: none;
+}
+
+.download-btn:hover {
+  color: #fff;
+  background-color: rgb(0, 0, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.download-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.title-resume {
+  font-size: 24px; 
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 100px;
+  left: 45vw; /* Adjust as needed */
+}
+
+.side-heading {
+  font-size: 24px; 
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+.experience {
+    margin-top: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.job-description {
+    margin-top: 10px;
+}
+
+.education {
+    margin-top: 20px;
+}
+
+.education-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.education-description {
+    margin-top: 10px;
+}
+
+.blue-box {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
 /* For normal state */
 input[type="text"],
 input[type="email"],
@@ -477,4 +633,5 @@ footer {
   width: 100%; /* Make sure the icon fills its container */
   height: auto; /* Maintain aspect ratio */
 }
+
 }
