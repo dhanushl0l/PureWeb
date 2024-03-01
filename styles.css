@@ -819,4 +819,127 @@ footer {
   width: 100%; /* Make sure the icon fills its container */
   height: auto; /* Maintain aspect ratio */
 }
+
+/*resume*/
+.container-resume {
+  height: 2100px;
+}
+
+.container-job {
+  width: 450px;
+  height: 450px;
+}
+
+.resume-object-1 {
+  top: 40px;
+  left: 60px;
+}
+
+.resume-object-2 {
+  top: 72px;
+  left: 60px;
+}
+
+.resume-object-3 {
+  top: 105px;
+  left: 60px;
+}
+
+.resume-object-4 {
+  top: 140px;
+  left: 60px;
+}
+
+.resume-object-5 {
+  top: 170px;
+  left: 60px;
+  right: 60px;
+  overflow-wrap: break-word; 
+}
+
+
+.resume-object-6 {
+  top: 100px;
+  overflow-wrap: break-word; 
+}
+
+.container-education {
+  width: 450px;
+  height: 450px;
+  margin-top: 720px;
+}
+
+.container-skillset-languages {
+  width: 450px;
+  margin-top: 1220px;
+  height: 420px;
+}
+
+.container-skillset {
+  width: 100%;
+  margin-top: 40px;
+  height: 200px;
+}
+.container-languages {
+  width: 100%;
+  margin-top: 230px;
+  height: 180px;
+}
+
+.skillset li {
+  flex-basis: 100%; 
+  margin-bottom: 10px; 
+}
+
+.languages li {
+  flex: 0 0 48%; 
+  margin-bottom: 10px; 
+  right: 60px;
+}
+
+.container-skills {
+  width: 450px;
+  margin-top: 1690px;
+  height: 350px;
+  position: absolute;
+}
+
+.header-skills-1 {
+  top: 30px;
+  left: 60px;
+  right: 50px;
+}
+
+.progress-1 {
+  position: relative;
+  top: 150px; 
+  width: 330px;
+}
+
+.header-skills-Python {
+  top: 205px;
+  left: 60px;
+}
+
+.header-skills-JavaScript {
+  top: 115px;
+  left: 60px;
+}
+
+
+.progress-2 {
+  width: 330px;
+  top: 238px;
+}
+
+.container-education-header {
+  margin-top: 660px;
+  width: 445px;
+}
+
+.container-d-side{
+  margin-top: 80px;
+  width: 445px;
+}
+
 }
