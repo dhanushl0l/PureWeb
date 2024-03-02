@@ -443,12 +443,15 @@ a.about-me p {
   position: absolute;
   top: 40px;
   left: 60px;
+  right: 60px;
   font-size: 17px;
   font-weight: normal;
 }
 
 .skillset ul {
   display: flex;
+  left: 60px;
+  right: 60px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -472,6 +475,7 @@ a.about-me p {
   position: absolute;
   top: 40px;
   left: 60px;
+  right: 60px;
   font-size: 17px;
   font-weight: normal;
 }
@@ -518,6 +522,7 @@ a.about-me p {
   position: absolute;
   top: 60px;
   left: 60px;
+  right: 60px;
   font-weight: bold;
   font-size: 29px;
 }
@@ -547,8 +552,8 @@ a.about-me p {
   background-color: rgb(232,220,204);
   border-radius: 5px;
   top: 145px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .progress-bar-1 {
@@ -564,8 +569,8 @@ a.about-me p {
   background-color: rgb(232,220,204);
   border-radius: 5px;
   top: 238px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .progress-bar-2 {
@@ -823,10 +828,13 @@ footer {
 /*resume*/
 .container-resume {
   height: 2100px;
+  width: 100%;
 }
 
 .container-job {
-  width: 450px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
   height: 450px;
 }
 
@@ -859,31 +867,35 @@ footer {
 
 
 .resume-object-6 {
-  top: 100px;
+  top: 120px;
   overflow-wrap: break-word; 
 }
 
 .container-education {
-  width: 450px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
   height: 450px;
   margin-top: 720px;
 }
 
 .container-skillset-languages {
-  width: 450px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
   margin-top: 1220px;
-  height: 420px;
+  height: 430px;
 }
 
 .container-skillset {
   width: 100%;
   margin-top: 40px;
-  height: 200px;
+  height: 220px;
 }
 .container-languages {
   width: 100%;
-  margin-top: 230px;
-  height: 180px;
+  margin-top: 260px;
+  height: 160px;
 }
 
 .skillset li {
@@ -898,22 +910,22 @@ footer {
 }
 
 .container-skills {
-  width: 450px;
-  margin-top: 1690px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
+  margin-top: 1700px;
   height: 350px;
   position: absolute;
 }
 
 .header-skills-1 {
   top: 30px;
-  left: 60px;
   right: 50px;
 }
 
 .progress-1 {
-  position: relative;
+  width: 70%;
   top: 150px; 
-  width: 330px;
 }
 
 .header-skills-Python {
@@ -928,18 +940,23 @@ footer {
 
 
 .progress-2 {
-  width: 330px;
+  width: 70%;
   top: 238px;
 }
 
+
 .container-education-header {
   margin-top: 660px;
-  width: 445px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
 }
 
 .container-d-side{
   margin-top: 80px;
-  width: 445px;
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
 }
 
 }

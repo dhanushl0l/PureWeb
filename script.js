@@ -1,4 +1,5 @@
-// Add nav section selector 
+const headerHeight = document.querySelector('header').offsetHeight;
+
 const links = document.querySelectorAll("nav ul li a");
 
 links.forEach(function(link) {
@@ -13,6 +14,12 @@ links.forEach(function(link) {
     });
 
     targetSection.classList.add("active");
+
+    // Scroll to the top of the target section with a smooth transition
+    window.scrollTo({
+      top: targetSection.offsetTop - headerHeight,
+      behavior: 'smooth'
+    });
   });
 });
 
@@ -23,6 +30,12 @@ document.querySelector(".about-button-1").addEventListener("click", function() {
     section.classList.remove("active");
   });
   resumeSection.classList.add("active");
+
+  // Scroll to the resume section with a smooth transition
+  window.scrollTo({
+    top: resumeSection.offsetTop - headerHeight,
+    behavior: 'smooth'
+  });
 });
 
 document.querySelector(".about-button-2").addEventListener("click", function() {
@@ -31,4 +44,10 @@ document.querySelector(".about-button-2").addEventListener("click", function() {
     section.classList.remove("active");
   });
   projectsSection.classList.add("active");
+
+  // Scroll to the projects section with a smooth transition
+  window.scrollTo({
+    top: projectsSection.offsetTop - headerHeight,
+    behavior: 'smooth'
+  });
 });
