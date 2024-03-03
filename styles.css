@@ -120,13 +120,13 @@ a.about-me p {
   margin-left: 0px; /* Add a left margin of 20 pixels */
 }
 
-.about-button-1 {
+.about-button-2 {
     appearance: none;
     background-color: transparent;
     border: 2px solid rgb(0, 0, 255);
     border-radius: 30px;
     box-sizing: border-box;
-    color: #3B3B3B;
+    color: #000000;
     cursor: pointer;
     display: inline-block;
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -148,23 +148,23 @@ a.about-me p {
     will-change: transform;
   }
   
-  .about-button-1:disabled {
+  .about-button-2:disabled {
     pointer-events: none;
   }
   
-  .about-button-1:hover {
+  .about-button-2:hover {
     color: #fff;
     background-color: rgb(0, 0, 255);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
   
-  .about-button-1:active {
+  .about-button-2:active {
     box-shadow: none;
     transform: translateY(0);
   }
 
-.about-button-2 {
+.about-button-1 {
     appearance: none;
     background-color: rgb(0, 0, 255);
     border: 2px solid rgb(0, 0, 255);
@@ -193,11 +193,11 @@ a.about-me p {
     will-change: transform;
   }
   
-  .about-button-2:disabled {
+  .about-button-1:disabled {
     pointer-events: none;
   }
   
-  .about-button-2:hover {
+  .about-button-1:hover {
     color: #000000;
     background-color: transparent;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
@@ -713,28 +713,7 @@ li {
     margin-bottom: 5px;
 }
 
-
-.project {
-  display: inline-block;
-  text-align: left;
-  margin-top: 20px;
-}
-
-.main-heading {
-  margin-top: 40px;
-}
-
-.project-name {
-  font-size: 24px;
-}
-
-.role-title {
-  font-size: 18px;
-}
-
-.project-description {
-  font-size: 16px;
-}
+/*projects*/
 
 .container-projects {
   background-color: rgb(232,220,204);
@@ -756,11 +735,29 @@ li {
   border-radius: 10px;
 }
 
+.container-project-page-description {
+  width: 600px;
+  position: absolute;
+  margin-top: 100px;
+  height: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px; /* Add a slight curve */
+}
+
+.project-page-description {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  text-align: center; 
+  margin: 0 auto; 
+}
+
 .container-project-1 {
   background-color: rgb(255, 255, 255);
   width: 700px;
   position: absolute;
-  margin-top: 60px;
+  margin-top: 240px;
   height: 350px;
   border-radius: 10px; /* Add a slight curve */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
@@ -1014,4 +1011,18 @@ footer {
   min-width: 350px;
 }
 
+.container-project-1 {
+  max-width: 450px;
+  width: 80%;
+  min-width: 350px;
+  height: 450px;
+  margin-top: 300px;
+}
+
+.container-project-page-description {
+  max-width: 400px;
+  width: 65%;
+  min-width: 300px;
+  height: 450px;
+}
 }
