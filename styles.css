@@ -713,6 +713,61 @@ li {
     margin-bottom: 5px;
 }
 
+
+.project {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.main-heading {
+  margin-top: 40px;
+}
+
+.project-name {
+  font-size: 24px;
+}
+
+.role-title {
+  font-size: 18px;
+}
+
+.project-description {
+  font-size: 16px;
+}
+
+.container-projects {
+  background-color: rgb(232,220,204);
+  border-radius: 0px;
+  width: 100%;
+  height: 1500px;
+  box-sizing: border-box;
+}
+
+.Projects-heading {
+  font-size: 24px; 
+  font-weight: bold;
+  position: absolute;
+  margin-top: 30px;
+  height: 250px;
+  float: left; 
+  margin-left: 50%; 
+  transform: translateX(-50%); 
+  border-radius: 10px;
+}
+
+.container-project-1 {
+  background-color: rgb(255, 255, 255);
+  width: 700px;
+  position: absolute;
+  margin-top: 60px;
+  height: 350px;
+  border-radius: 10px; /* Add a slight curve */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  transition: box-shadow 0.3s, transform 0.3s; 
+  left: 50%;
+  transform: translateX(-50%);
+}
 /*contact*/
 .container-contact {
   background-color: rgb(232,220,204);
