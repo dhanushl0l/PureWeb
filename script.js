@@ -67,3 +67,23 @@ document.querySelectorAll('.nav .nav-item').forEach(item => {
     document.querySelector('.nav').classList.remove('open');
   });
 });
+
+function callNumber(phoneNumber) {
+  window.location.href = 'tel:' + phoneNumber;
+}
+
+function sendEmail(emailAddress) {
+  window.location.href = 'mailto:' + emailAddress;
+}
+
+function openTelegram() {
+  window.open('https://t.me/dh33_6');
+}
+
+function openWhatsApp() {
+  window.open('https://wa.me/8248417774');
+}
+
+function sendSMS(phoneNumber) {
+  window.location.href = 'sms:' + phoneNumber;
+}

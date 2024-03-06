@@ -207,39 +207,40 @@
 
 <!-- Contact Page -->
 <div id="contact" class="section">
-    <div class="container-contact">
-      <h2 class="contact-heading">Let's talk</h2>
-      <div class="contact-form-container">
-        <form action="#" method="post">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" required>
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <input type="submit" value="SEND">
-        </form>
+  <div class="container-contact">
+    <h1 class="title-resume">CONTACT</h1>
+    <div class="container-contact-mail">
+     <div class="contact-info-mail">
+      <div class="contact-object-1">Email</div>
+      <div class="contact-object-2">dhanush@dhanush.online</div>
+        <div class="contact-object-3">
+            <a onclick="sendEmail('dhanush@dhanush.online')">Email</a>
+        </div>
       </div>
     </div>
+    <div class="container-contact-message">
+      <div class="contact-object-1">Message</div>
+<div class="contact-message">
+    <a class="contact-object-5" onclick="openTelegram()">Telegram</a>
+    <a class="contact-object-3" onclick="openWhatsApp('')">WhatsApp</a>
+    <a class="contact-object-4" onclick="sendSMS('+918248417774')">SMS</a>
+        </div>
+    </div>
+    <div class="container-contact-phone">
+      <div class="contact-info phone">
+        <div class="contact-object-1">Phone</div>
+        <div class="contact-object-2">+91 82484 17774</div>
+        <div class="contact-object-3">
+            <a onclick="callNumber('+918248417774')">Call</a>
+          </div>
+        </div>
+      </div>
   </div>
+</div>
   <footer>
     <div id="copyright" class="footer-content bottom-left">
       <p>© MIT.</p>
-      <p>Powered and the Admin</p>
+      <p>Powered by the Admin</p>
     </div>
   
     <div id="call" class="footer-content center">
