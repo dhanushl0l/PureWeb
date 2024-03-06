@@ -55,3 +55,9 @@ document.querySelector(".about-button-2").addEventListener("click", function() {
 document.querySelector('.nav-b').addEventListener('click', function() {
   document.querySelector('.nav').classList.toggle('open');
 });
+
+document.querySelectorAll('.nav .nav-item').forEach(item => {
+  item.addEventListener('click', function() {
+    document.querySelector('.nav').classList.remove('open');
+  });
+});

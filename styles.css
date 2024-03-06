@@ -50,6 +50,20 @@ h1:hover span {
   color: #000000;
 }
 
+.section.active{
+  display: block;
+  animation: fadeIn 1.0s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .nav-b{
   display: none;
 }
@@ -394,7 +408,8 @@ a.about-me p {
 .resume-object-5 {
   position: absolute;
   top: 80px;
-  left: 250px;
+  left: 280px;
+  right: 60px;
   font-size: 15px;
   font-weight: normal; /* Set font weight to normal */
 }
@@ -675,11 +690,8 @@ a.about-me p {
   font-weight: bold;
   position: absolute;
   margin-top: 30px;
-  height: 250px;
-  float: left; 
-  margin-left: 50%; 
-  transform: translateX(-50%); 
-  border-radius: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .side-heading {
@@ -979,7 +991,7 @@ footer {
 
 /*resume*/
 .container-resume {
-  height: 2200px;
+  height: 2150px;
   width: 100%;
 }
 
@@ -1112,7 +1124,7 @@ footer {
 }
 /*project*/
 .container-projects {
-  height: 2500px;
+  height: 2380px;
 }
 
 .container-project-page-description {
@@ -1183,8 +1195,8 @@ footer {
   --color: #000000; 
   z-index: 9999;
   background: none;
-  max-width: 60px;
-  height: 56px;
+  height: 40px;
+  width: 50px;
   top: 20;
   right: 0;
   position: fixed;
@@ -1195,6 +1207,8 @@ footer {
     fill: none;
     stroke: var(--color);
     stroke-width: 7px;
+    height: 60px;
+    width: 60px;
     stroke-linecap: round;
     stroke-linejoin: round;
     use {
@@ -1277,29 +1291,52 @@ footer {
 
 .nav.open {
   position: fixed;
-  backdrop-filter: blur(5px);
-  display: flex;
+  background-color: rgb(232,220,204);
+  display: block;
+  animation: fadeIn 0.5s ease-in;
   justify-content: center; 
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9991; 
+  z-index: 9991;
+}
+
+.nav.close {
+  animation: fadeout 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav ul {
   list-style-type: none;
-  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
   padding: 0;
-  display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center; 
-  flex-direction: column;
-  height: 100vh; 
+}
+
+.nav li {
+  display: block; /* Display each item on a separate line */
+  text-align: center; /* Center the text within each item */
+  padding: 10px; /* Add some padding for spacing */
 }
 
 .nav-item {
   text-align: center; 
+
 }
 
 .nav-link {
