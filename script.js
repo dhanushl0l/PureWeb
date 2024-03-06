@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const defaultSection = document.getElementById("about");
+    defaultSection.classList.add("active");
+});
+
 const headerHeight = document.querySelector('header').offsetHeight;
 
 const links = document.querySelectorAll("nav ul li a");
@@ -14,6 +19,7 @@ links.forEach(function(link) {
     });
 
     targetSection.classList.add("active");
+
 
     // Scroll to the top of the target section with a smooth transition
     window.scrollTo({

@@ -50,9 +50,8 @@ h1:hover span {
   color: #000000;
 }
 
-.section.active{
-  display: block;
-  animation: fadeIn 1.0s ease-in;
+.section.active {
+  animation: fadeIn 0.5s ease-in;
 }
 
 @keyframes fadeIn {
@@ -63,6 +62,7 @@ h1:hover span {
     opacity: 1;
   }
 }
+
 
 .nav-b{
   display: none;
@@ -262,7 +262,7 @@ a.about-me p {
   transform: translate(-50%, -50%); /* Center it precisely */
 }
 
-.about-section .container {
+.container-about-section {
   background-color: rgb(232,220,204);
   border-radius: 0px;
   width: 45vw;
@@ -948,7 +948,7 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-.about-section .container {
+.container-about-section  {
   background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232,220,204) 10%);
   border-radius: 0;
   right: 0;
@@ -1031,7 +1031,7 @@ footer {
 
 
 .resume-object-6 {
-  top: 120px;
+  top: 140px;
   overflow-wrap: break-word; 
 }
 
@@ -1285,6 +1285,7 @@ footer {
     stroke-dasharray: 25 270;
   }
 }
+
 .nav {
   display: none;
 }
@@ -1302,18 +1303,6 @@ footer {
   z-index: 9991;
 }
 
-.nav.close {
-  animation: fadeout 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .nav ul {
   list-style-type: none;
@@ -1329,9 +1318,9 @@ footer {
 }
 
 .nav li {
-  display: block; /* Display each item on a separate line */
-  text-align: center; /* Center the text within each item */
-  padding: 10px; /* Add some padding for spacing */
+  display: block; 
+  text-align: center; 
+  padding: 10px; 
 }
 
 .nav-item {
@@ -1345,5 +1334,4 @@ footer {
   color: rgb(0, 0, 0);
   padding: 10px 15px;
 }
-
 }
