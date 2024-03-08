@@ -1,6 +1,6 @@
 # Open Source Portfolio Website
 
-This is an open-source portfolio website template that you can use for your personal or professional portfolio. The website is designed to be easily customizable and includes a donate button for accepting contributions. The template is licensed under the MIT License, so feel free to use it however you like.
+This is an open-source portfolio website template that you can use for your personal or professional portfolio. The website is designed to be easily customizable. The template is licensed under the MIT License, so feel free to use it however you like.
 
 ## Features
 - Responsive design for mobile and desktop.
