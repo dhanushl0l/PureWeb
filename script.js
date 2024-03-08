@@ -58,14 +58,30 @@ document.querySelector(".about-button-2").addEventListener("click", function() {
   });
 });
 
-document.querySelector('.nav-b').addEventListener('click', function() {
+document.querySelector('.nav-b').addEventListener('click', function(event) {
   document.querySelector('.nav').classList.toggle('open');
+  event.stopPropagation(); // Prevent the click event from bubbling up to the document
 });
 
 document.querySelectorAll('.nav .nav-item').forEach(item => {
   item.addEventListener('click', function() {
     document.querySelector('.nav').classList.remove('open');
   });
+});
+
+document.body.addEventListener('click', function(event) {
+  const nav = document.querySelector('.nav');
+  if (nav.classList.contains('open') && !event.target.closest('.nav-b') && !event.target.closest('.nav-item')) {
+    nav.classList.remove('open');
+  }
+});
+
+document.body.addEventListener('click', function(event) {
+  var checkbox = document.querySelector('.nav-b input[type="checkbox"]');
+  // Check if the checkbox is checked and the click is not on the .nav-b element or its children
+  if (checkbox.checked && !event.target.closest('.nav-b')) {
+      checkbox.checked = false; // Uncheck the checkbox
+  }
 });
 
 function callNumber(phoneNumber) {
