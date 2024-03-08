@@ -14,7 +14,6 @@ To use this template, follow these steps:
 1. Clone the repository to your local machine.
 2. Customize the content in the HTML and CSS files to match your portfolio.
 3. Replace the placeholder image with your own profile picture.
-4. Update the donate button link to your preferred donation platform.
 
 ## Preview
 ![Portfolio Website Preview](https://i.imgur.com/udzhanU.png)
@@ -25,11 +24,5 @@ This project is licensed under the MIT License
 ## Contributing
 Contributions are welcome! If you have any ideas for improvement or would like to report a bug, please open an issue or submit a pull request.
 
-## Support
-If you find this template helpful, consider supporting the project by clicking the donate button below.
-
-[![Donate](/path/to/donate/button)]()
-
----
 
 Feel free to use this template for your own portfolio website and share it with others. If you have any questions or need help, please don't hesitate to reach out.
