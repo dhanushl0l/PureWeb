@@ -5,6 +5,7 @@ body {
 }
 
 header {
+  min-width: 300px;
   display: flex;           
   justify-content: space-between; 
   align-items: center;  
@@ -341,6 +342,7 @@ a.about-me p {
   
   /* resuume */
   .container-resume {
+    min-width: 300px;
     background-color: rgb(232,220,204);
     border-radius: 0px;
     width: 100%;
@@ -741,6 +743,7 @@ li {
 /*projects*/
 
 .container-projects {
+  min-width: 300px;
   background-color: rgb(232,220,204);
   border-radius: 0px;
   width: 100%;
@@ -885,6 +888,7 @@ li {
 
 /*contact*/
 .container-contact {
+  min-width: 300px;
   background-color: rgb(232,220,204);
   border-radius: 0px;
   width: 100%;
@@ -1242,6 +1246,7 @@ footer {
 }
 
 .container-about-section  {
+  min-width: 300px;
   background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232,220,204) 10%);
   border-radius: 0;
   right: 0;
@@ -1252,6 +1257,7 @@ footer {
 
 
 footer {
+  min-width: 300px;
   position: static;
   bottom: 0;
   width: 100%;
