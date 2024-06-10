@@ -69,6 +69,7 @@ h1:hover span {
   display: none;
 }
 
+
 .nav {
   position: absolute;
   top: 20px;
@@ -101,12 +102,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #000000; /* Dark text color */
+  color: #000000; 
+  transition: color 0.3s ease;
 }
 
 .nav ul li a:hover {
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255, 0, 0);
+  color: rgb(0, 0, 255);
 }
 
 .section {
