@@ -6,7 +6,6 @@ This is an open-source portfolio website template that you can use for your pers
 - Responsive design for mobile and desktop.
 - Clean and modern layout.
 - Easy to customize and add your own content.
-- Includes a donate button for accepting contributions.
 
 ## Getting Started
 To use this template, follow these steps:
@@ -16,7 +15,7 @@ To use this template, follow these steps:
 3. Replace the placeholder image with your own profile picture.
 
 ## Preview
-![Portfolio Website Preview](https://i.imgur.com/udzhanU.png)
+![Portfolio Website Preview](https://i.imgur.com/E8qwI2k.png)
 
 ## License
 This project is licensed under the MIT License
