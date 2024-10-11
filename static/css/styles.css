@@ -1,17 +1,21 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 header {
   min-width: 300px;
-  display: flex;           
-  justify-content: space-between; 
-  align-items: center;  
-  padding: 10px 0; /* 10px of padding on the top and bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-  
+
+.nav-link.active {
+  color: rgb(0, 0, 255);
+}
+
 h1 {
   margin-left: 10px;
   font-size: 1.5em;
@@ -38,11 +42,13 @@ h1:hover span:nth-child(1) {
 }
 
 h1:hover span:nth-child(2) {
-  display: none; 
+  display: none;
 }
+
 h1:hover span:nth-child(0) {
-  display: none; 
+  display: none;
 }
+
 h1:hover span:nth-child(3) {
   opacity: 0;
 }
@@ -59,13 +65,14 @@ h1:hover span {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 
-.nav-b{
+.nav-b {
   display: none;
 }
 
@@ -102,7 +109,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #000000; 
+  color: #000000;
   transition: color 0.3s ease;
 }
 
@@ -112,32 +119,32 @@ nav ul li a {
 }
 
 .section {
-    display: none;
+  display: none;
 }
 
 .section.active {
-    display: block;
+  display: block;
 }
 
 .circle {
-  position: absolute; /* Position absolutely */
-  top: 10%; /* Align to the vertical center */
+  position: absolute;
+  top: 10%;
   left: 23%;
-  width: 200px; /* Set the width and height to create a circle */
+  width: 200px;
   height: 200px;
-  border-radius: 50%; /* Make it a circle */
-  overflow: hidden; /* Clip the image to the circle */
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .circle img {
-  width: 100%; /* Make the image fill the circle */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire circle */
+  object-fit: cover;
 }
 
 .line {
   position: absolute;
-  margin-top: 350px; /* Add a top margin of 10 pixels */
+  margin-top: 350px;
   transform: translateX(280%);
   width: 15%;
   height: 3px;
@@ -145,128 +152,129 @@ nav ul li a {
 }
 
 a.hello p {
-  font-size: 100px; /* Change the font size to 24 pixels */
-  font-weight: bold; /* Make the text bold */
-  font-family: Arial, sans-serif; /* Change the font family to Arial or a generic sans-serif font */
-  margin-top: 0px; /* Add a top margin of 10 pixels */
-  margin-left: 0px; /* Add a left margin of 20 pixels */
+  font-size: 100px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 a.about-me p {
-  font-size:20px; /* Change the font size to 24 pixels */
-  font-weight: bold; /* Make the text bold */
-  font-family: Arial, sans-serif; 
-  margin-top: -100px; /* Add a top margin of 10 pixels */
-  margin-left: 0px; /* Add a left margin of 20 pixels */
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-top: -100px;
+  margin-left: 0px;
 }
 
 .about-button-2 {
-    appearance: none;
-    background-color: transparent;
-    border: 2px solid rgb(0, 0, 255);
-    border-radius: 30px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 30px;
-    min-width: 0;
-    outline: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 120px;
-    will-change: transform;
-  }
-  
-  .about-button-2:disabled {
-    pointer-events: none;
-  }
-  
-  .about-button-2:hover {
-    color: #fff;
-    background-color: rgb(0, 0, 255);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .about-button-2:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(0, 0, 255);
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 30px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 120px;
+  will-change: transform;
+}
+
+.about-button-2:disabled {
+  pointer-events: none;
+}
+
+.about-button-2:hover {
+  color: #fff;
+  background-color: rgb(0, 0, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.about-button-2:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 .about-button-1 {
-    appearance: none;
-    background-color: rgb(0, 0, 255);
-    border: 2px solid rgb(0, 0, 255);
-    border-radius: 30px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    margin-left: 100%;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 30px;
-    min-width: 0;
-    outline: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 120px;
-    will-change: transform;
-  }
-  
-  .about-button-1:disabled {
-    pointer-events: none;
-  }
-  
-  .about-button-1:hover {
-    color: #000000;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .about-button-1:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
+  appearance: none;
+  background-color: rgb(0, 0, 255);
+  border: 2px solid rgb(0, 0, 255);
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 100%;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 30px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 120px;
+  will-change: transform;
+}
+
+.about-button-1:disabled {
+  pointer-events: none;
+}
+
+.about-button-1:hover {
+  color: #000000;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.about-button-1:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 .name {
-  font-size:30px; /* Set the font size to 10px */
-  position: absolute; /* Position the element absolutely */
-  top: 55%; /* Position it at the vertical center */
-  left: 50%; /* Position it at the horizontal center */
-  transform: translate(-50%, -50%); /* Center it precisely */
+  font-size: 30px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .role {
-  font-size:18px; /* Set the font size to 10px */
-  position: absolute; /* Position the element absolutely */
-  top: 80%; /* Position it at the vertical center */
-  left: 50%; /* Position it at the horizontal center */
-  transform: translate(-50%, -50%); /* Center it precisely */
+  font-size: 18px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center it precisely */
 }
 
 .container-about-section {
-  background-color: rgb(232,220,204);
+  background-color: rgb(232, 220, 204);
   border-radius: 0px;
   width: 45vw;
   height: 900px;
@@ -285,7 +293,7 @@ a.about-me p {
 .square-box {
   width: 370px;
   height: 480px;
-  background-color: rgba(244,236,230,255);
+  background-color: rgba(244, 236, 230, 255);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
@@ -313,43 +321,43 @@ a.about-me p {
   width: 25px;
   height: 25px;
   margin: 10px 20px;
-  transition: transform 0.3s; /* Smooth transition for the hover effect */
+  transition: transform 0.3s;
 }
 
 .social-icons-in-square .icon:hover {
-  transform: scale(1.3); /* Increase the size of the icon on hover */
+  transform: scale(1.3);
 }
 
 
 .square-for-icons {
-  width: 370px; /* Set the initial width */
-  height: 50px; /* Set the initial height */
-  background-color: rgb(255, 255, 255); /* Set the background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-  position: absolute; /* Position absolutely */
-  top:105%; /* Align to the vertical center */
-  left: 50%; /* Align to the horizontal center */
-  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 370px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  /* resuume */
-  .container-resume {
-    min-width: 300px;
-    background-color: rgb(232,220,204);
-    border-radius: 0px;
-    width: 100%;
-    height: 2000px;
-    box-sizing: border-box;
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* resuume */
+.container-resume {
+  min-width: 300px;
+  background-color: rgb(232, 220, 204);
+  border-radius: 0px;
+  width: 100%;
+  height: 2100px;
+  box-sizing: border-box;
 }
 
 
@@ -359,15 +367,15 @@ a.about-me p {
   width: 700px;
   position: absolute;
   height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
-  }
+}
 
 .resume-object-1 {
-  color: rgba(0,0,255);
+  color: rgba(0, 0, 255);
   position: absolute;
   top: 100px;
   left: 60px;
@@ -380,7 +388,7 @@ a.about-me p {
   top: 132px;
   left: 60px;
   font-size: 20px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 .resume-object-3 {
@@ -388,7 +396,7 @@ a.about-me p {
   top: 160px;
   left: 60px;
   font-size: 15px;
-  font-weight: normal; /* Set font weight to normal */
+  font-weight: normal;
 }
 
 .resume-object-4 {
@@ -396,7 +404,7 @@ a.about-me p {
   top: 200px;
   left: 60px;
   font-size: 15px;
-  font-weight: normal; /* Set font weight to normal */
+  font-weight: normal;
 }
 
 .resume-object-5 {
@@ -405,14 +413,14 @@ a.about-me p {
   left: 280px;
   right: 60px;
   font-size: 15px;
-  font-weight: normal; /* Set font weight to normal */
+  font-weight: normal;
 }
 
 .resume-object-6 {
   position: absolute;
   top: 100px;
   font-size: 15px;
-  font-weight: normal; /* Set font weight to normal */
+  font-weight: normal;
 }
 
 .container-education {
@@ -421,9 +429,9 @@ a.about-me p {
   position: absolute;
   margin-top: 660px;
   height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -435,9 +443,9 @@ a.about-me p {
   position: absolute;
   margin-top: 1060px;
   height: 450px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -447,7 +455,7 @@ a.about-me p {
   position: absolute;
   margin-top: 70px;
   height: 200px;
-  border-radius: 10px; /* Add a slight curve */
+  border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -457,7 +465,7 @@ a.about-me p {
   position: absolute;
   margin-top: 240px;
   height: 200px;
-  border-radius: 10px; /* Add a slight curve */
+  border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -471,7 +479,7 @@ a.about-me p {
 }
 
 .skillset {
-  font-size: 16px; 
+  font-size: 16px;
   position: absolute;
   top: 40px;
   left: 60px;
@@ -489,8 +497,8 @@ a.about-me p {
 }
 
 .skillset li {
-  flex: 0 0 48%; /* Two items per row with a small gap */
-  margin-bottom: 10px; /* Optional spacing between items */
+  flex: 0 0 48%;
+  margin-bottom: 10px;
 }
 
 .container-education-header {
@@ -503,7 +511,7 @@ a.about-me p {
 }
 
 .languages {
-  font-size: 16px; 
+  font-size: 16px;
   position: absolute;
   top: 40px;
   left: 60px;
@@ -519,13 +527,13 @@ a.about-me p {
 }
 
 .languages li {
-  flex: 0 0 48%; /* Two items per row with a small gap */
-  margin-bottom: 10px; /* Optional spacing between items */
+  flex: 0 0 48%;
+  margin-bottom: 10px;
 }
 
 .side-heading {
-    font-weight: bold;
-    margin-bottom: 50vw;
+  font-weight: bold;
+  margin-bottom: 50vw;
 }
 
 .container-d-side {
@@ -542,10 +550,10 @@ a.about-me p {
   width: 700px;
   position: absolute;
   margin-top: 1560px;
-  height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -559,8 +567,8 @@ a.about-me p {
   font-size: 29px;
 }
 
-.header-skills-JavaScript {
-  font-size: 16px; 
+.header-skills-rust {
+  font-size: 16px;
   position: absolute;
   top: 115px;
   left: 60px;
@@ -569,9 +577,18 @@ a.about-me p {
 }
 
 .header-skills-Python {
-  font-size: 16px; 
+  font-size: 16px;
   position: absolute;
   top: 205px;
+  left: 60px;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.header-skills-javascrept {
+  font-size: 16px;
+  position: absolute;
+  top: 300px;
   left: 60px;
   font-size: 17px;
   font-weight: normal;
@@ -581,7 +598,7 @@ a.about-me p {
   height: 15px;
   position: absolute;
   width: 83%;
-  background-color: rgb(232,220,204);
+  background-color: rgb(232, 220, 204);
   border-radius: 5px;
   top: 145px;
   margin-left: 60px;
@@ -591,14 +608,31 @@ a.about-me p {
 .progress-bar-1 {
   height: 100%;
   border-radius: 5px;
-  background-color: rgb(0 , 0 ,255);
+  background-color: rgb(0, 0, 255);
+}
+
+.progress-bar-3 {
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 255);
+}
+
+.progress-3 {
+  height: 15px;
+  position: absolute;
+  width: 83%;
+  background-color: rgb(232, 220, 204);
+  border-radius: 5px;
+  top: 330px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .progress-2 {
   height: 15px;
   position: absolute;
   width: 83%;
-  background-color: rgb(232,220,204);
+  background-color: rgb(232, 220, 204);
   border-radius: 5px;
   top: 238px;
   margin-left: 60px;
@@ -608,79 +642,79 @@ a.about-me p {
 .progress-bar-2 {
   height: 100%;
   border-radius: 5px;
-  background-color: rgb(0 , 0 ,255);
+  background-color: rgb(0, 0, 255);
 }
 
-  .download-btn {
-    all: unset;
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
-    background: transparent;
-    border: none;
-    position: relative;
-    color: #f0f0f0;
-    cursor: pointer;
-    z-index: 1;
-    padding: 10px 20px;
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .download-btn::after,
-  .download-btn::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -99999;
-    transition: all .4s;
-  }
-  
-  .download-btn::before {
-    transform: translate(0%, 0%);
-    width: 100%;
-    height: 100%;
-    background: rgb(0 , 0 ,255);
-    border-radius: 10px;
-  }
-  
-  .download-btn::after {
-    transform: translate(10px, 10px);
-    width: 35px;
-    height: 35px;
-    background: #ffffff15;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 50px;
-  }
-  
-  .download-btn:hover::before {
-    transform: translate(5%, 20%);
-    width: 110%;
-    height: 110%;
-  }
-  
-  .download-btn:hover::after {
-    border-radius: 10px;
-    transform: translate(0, 0);
-    width: 100%;
-    height: 100%;
-  }
-  
-  .download-btn:active::after {
-    transition: 0s;
-    transform: translate(0, 5%);
+.download-btn {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.download-btn::after,
+.download-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.download-btn::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 255);
+  border-radius: 10px;
+}
+
+.download-btn::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.download-btn:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.download-btn:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.download-btn:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }
 
 .title-resume {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
   position: absolute;
   margin-top: 30px;
@@ -689,7 +723,7 @@ a.about-me p {
 }
 
 .side-heading {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
@@ -697,7 +731,7 @@ a.about-me p {
 }
 
 .side-heading-1 {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
@@ -705,48 +739,48 @@ a.about-me p {
 }
 
 .job {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .job-info {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
 .job-description {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .education {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .education-info {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
 .education-description {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /*projects*/
 
 .container-projects {
   min-width: 300px;
-  background-color: rgb(232,220,204);
+  background-color: rgb(232, 220, 204);
   border-radius: 0px;
   width: 100%;
   height: 1500px;
@@ -754,14 +788,14 @@ li {
 }
 
 .Projects-heading {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
   position: absolute;
   margin-top: 30px;
   height: 250px;
-  float: left; 
-  margin-left: 50%; 
-  transform: translateX(-50%); 
+  float: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
   border-radius: 10px;
 }
 
@@ -772,15 +806,15 @@ li {
   height: 120px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 10px; /* Add a slight curve */
+  border-radius: 10px;
 }
 
 .project-page-description {
   font-size: 18px;
   font-weight: normal;
   position: absolute;
-  text-align: center; 
-  margin: 0 auto; 
+  text-align: center;
+  margin: 0 auto;
 }
 
 .container-project-1 {
@@ -789,9 +823,9 @@ li {
   position: absolute;
   margin-top: 240px;
   height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -802,9 +836,9 @@ li {
   position: absolute;
   margin-top: 640px;
   height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -815,9 +849,9 @@ li {
   position: absolute;
   margin-top: 1040px;
   height: 350px;
-  border-radius: 10px; /* Add a slight curve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
-  transition: box-shadow 0.3s, transform 0.3s; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -826,7 +860,7 @@ li {
   position: absolute;
   width: 270px;
   height: 100%;
-  right: 0; /* Position from the right side */
+  right: 0;
 }
 
 .project-img img {
@@ -846,24 +880,24 @@ li {
 }
 
 .project-img-1 {
-  position: absolute; /* Set the container to relative positioning */
+  position: absolute;
   width: 270px;
   height: 100%;
-  right: 0; /* Position the container from the right side */
+  right: 0;
 }
 
 .project-img-1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position:left; /* Center the image horizontally and vertically */
+  object-position: left;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 
 .project-name {
-  color: rgb(0 , 0 ,255);
+  color: rgb(0, 0, 255);
   position: absolute;
   top: 72px;
   left: 50px;
@@ -891,15 +925,15 @@ li {
 /*contact*/
 .container-contact {
   min-width: 300px;
-  background-color: rgb(232,220,204);
+  background-color: rgb(232, 220, 204);
   border-radius: 0px;
   width: 100%;
-  height: 800px;
+  height: 900px;
   box-sizing: border-box;
 }
 
-.contact-object-1{
-  color: rgba(0,0,255);
+.contact-object-1 {
+  color: rgba(0, 0, 255);
   position: absolute;
   top: 75px;
   left: 60px;
@@ -907,12 +941,12 @@ li {
   font-size: 23px;
 }
 
-.contact-object-2{
+.contact-object-2 {
   position: absolute;
   top: 105px;
   left: 60px;
   font-size: 20px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 .contact-object-3 {
@@ -929,7 +963,7 @@ li {
   cursor: pointer;
   margin-left: 100%;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -963,6 +997,11 @@ li {
   transform: translateY(0);
 }
 
+.button {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-object-3-1 {
   appearance: none;
   background-color: rgb(0, 0, 255);
@@ -977,7 +1016,7 @@ li {
   cursor: pointer;
   margin-left: 100%;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1012,7 +1051,7 @@ li {
 }
 
 .contact-object-messages {
-  color: rgba(0,0,255);
+  color: rgba(0, 0, 255);
   position: absolute;
   top: 210px;
   left: 60px;
@@ -1034,7 +1073,7 @@ li {
   cursor: pointer;
   margin-left: 100%;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1082,7 +1121,7 @@ li {
   cursor: pointer;
   margin-left: 100%;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1117,19 +1156,32 @@ li {
 }
 
 
-.container-contact-all{
+.container-contact-mail {
   background-color: #fff;
   width: 700px;
   position: absolute;
   margin-top: 100px;
-  height: 600px;
-  border-radius: 10px; /* Add a slight curve */
+  height: 250px;
+  border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.contact-object-6{
-  color: rgba(0,0,255);
+.container-contact-socialmedia-links {
+  background-color: #fff;
+  width: 700px;
+  position: absolute;
+  margin-top: 293px;
+  height: 400px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: flex-start;
+  display: flex;
+}
+
+.contact-object-6 {
+  color: rgba(0, 0, 255);
   position: absolute;
   top: 430px;
   left: 60px;
@@ -1151,7 +1203,7 @@ li {
   cursor: pointer;
   margin-left: 100%;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1185,6 +1237,86 @@ li {
   transform: translateY(0);
 }
 
+.mail-contact-git {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: rgb(255, 255, 255);
+  width: 225px;
+  height: 260px;
+  margin: 70px 60px;
+  margin-right: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgb(244, 236, 230);
+  box-shadow: 0 1px 1px 0 rgb(193, 193, 193);
+}
+
+.mail-contact-object-1 {
+  position: relative;
+  top: 10%;
+  left: 23%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mail-contact-object-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mail-contact-object-2 {
+  color: rgba(0, 0, 255);
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 35px;
+}
+
+.mail-contact-object-3 {
+  width: 150px;
+  top: 7px;
+  left: 0;
+  position: relative;
+}
+
+.mail-contact-linkedin {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: rgb(255, 255, 255);
+  width: 321px;
+  height: 120px;
+  margin: 70px 0;
+  margin-right: 60px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgb(244, 236, 230);
+  box-shadow: 0 1px 1px 0 rgb(193, 193, 193);
+}
+
+.mail-contact-linkedin .mail-contact-object-1 {
+  width: 90px;
+  height: 90px;
+  top: 0;
+  left: 0;
+  margin: 15px;
+}
+
+.mail-contact-linkedin .mail-contact-object-2 {
+  top: 10px;
+  margin-top: -100px;
+  margin-left: 5px;
+}
+
+.mail-contact-linkedin .mail-contact-object-3 {
+  margin-left: 90px;
+  width: 170px;
+}
+
+.mail-contact-gitlabes {
+  margin-top: 210px;
+  margin-left: -381px;
+}
+
 /*footer*/
 footer {
   position: relative;
@@ -1208,453 +1340,547 @@ footer {
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
-  width: 20px; /* Adjust icon width as needed */
-  height: 20px; /* Adjust icon height as needed */
+  width: 20px;
+  height: 20px;
 }
 
 .social-icons img {
-  width: 100%; /* Make sure the icon fills its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width:900px) {
 
   .right-box {
-    width: 300px; /* Set the initial width */
-    height: 378px; /* Set the initial height */
-    position: absolute; /* Position absolutely */
-    top: 120%; /* Align to the vertical center */
-    left: 50%; /* Align to the horizontal center */
-    transform: translate(-50%, -50%); /* Center the box */
-    mix-blend-mode: multiply; /* Apply blend mode */
-  }
-  
-  
-  .square-box {
-    width: 370px; /* Set the initial width */
-    height: 480px; /* Set the initial height */
-    position: absolute; /* Position absolutely */
-    top: 46%; /* Align to the vertical center */
-    left: 50%; /* Align to the horizontal center */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-  }
-  .square-box-right-box {
-    width: 300px; /* Set the initial width */
-    height: 756px; /* Set the initial height */
+    width: 300px;
+    height: 378px;
     position: absolute;
-    top: 400px; /* Align to the vertical center */
-    left: 50%; /* Align to the horizontal center */
+    top: 120%;
+    left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.container-about-section  {
-  min-width: 300px;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232,220,204) 10%);
-  border-radius: 0;
-  right: 0;
-  width: 100%;
-  height: 1100px; 
-  box-sizing: border-box; 
-}
-
-
-footer {
-  min-width: 300px;
-  position: static;
-  bottom: 0;
-  width: 100%;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer-content {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.footer-content p {
-  margin: 5px 0;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  width: 20px; /* Adjust icon width as needed */
-  height: 20px; /* Adjust icon height as needed */
-}
-
-.social-icons img {
-  width: 100%; /* Make sure the icon fills its container */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/*resume*/
-.container-resume {
-  height: 2150px;
-  width: 100%;
-}
-
-.container-job {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  height: 450px;
-}
-
-.resume-object-1 {
-  top: 40px;
-  left: 60px;
-}
-
-.resume-object-2 {
-  top: 72px;
-  left: 60px;
-}
-
-.resume-object-3 {
-  top: 105px;
-  left: 60px;
-}
-
-.resume-object-4 {
-  top: 140px;
-  left: 60px;
-}
-
-.resume-object-5 {
-  top: 170px;
-  left: 60px;
-  right: 60px;
-  overflow-wrap: break-word; 
-}
-
-
-.resume-object-6 {
-  top: 140px;
-  overflow-wrap: break-word; 
-}
-
-.container-education {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  height: 450px;
-  margin-top: 720px;
-}
-
-.container-skillset-languages {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  margin-top: 1220px;
-  height: 460px;
-}
-
-.container-skillset {
-  width: 100%;
-  margin-top: 40px;
-  height: 220px;
-}
-.container-languages {
-  width: 100%;
-  margin-top: 260px;
-  height: 200px;
-}
-
-.skillset li {
-  flex-basis: 100%; 
-  margin-bottom: 10px; 
-}
-
-.languages li {
-  flex: 0 0 48%; 
-  margin-bottom: 10px; 
-  right: 60px;
-}
-
-.container-skills {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  margin-top: 1730px;
-  height: 350px;
-  position: absolute;
-}
-
-.header-skills-1 {
-  top: 30px;
-  right: 50px;
-}
-
-.progress-1 {
-  width: 70%;
-  top: 150px; 
-}
-
-.header-skills-Python {
-  top: 205px;
-  left: 60px;
-}
-
-.header-skills-JavaScript {
-  top: 115px;
-  left: 60px;
-}
-
-
-.progress-2 {
-  width: 70%;
-  top: 238px;
-}
-
-
-.container-education-header {
-  margin-top: 660px;
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-}
-
-.container-d-side{
-  margin-top: 80px;
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-}
-/*project*/
-.container-projects {
-  height: 2380px;
-}
-
-.container-project-page-description {
-  max-width: 400px;
-  width: 65%;
-  min-width: 300px;
-  height: 450px;
-}
-
-.container-project-1 {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  height: 600px;
-  margin-top: 300px;
-}
-
-.container-project-2 {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  height: 600px;
-  margin-top: 1000px;
-}
-
-.container-project-3 {
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-  height: 600px;
-  margin-top: 1700px;
-}
-.project-img {
-  width: 100%;
-  height: 50%;
-  bottom: 0; /* Position at the bottom */
-}
-
-.project-img img {
-  width: 100%;
-  height:100%;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.project-img-1 {
-  width: 100%;
-  height: 50%;
-  bottom: 0; /* Position at the bottom */
-}
-
-.project-img-1 img {
-  width: 100%;
-  height:100%;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.line-project-1 {
-  margin-top: 30px;
-}
-
-.project-name {
-  top: 28px;
-}
-
-.project-title {
-  top:60px;
-}
-
-.project-description {
-  position: absolute;
-  top: 115px;
-  left: 50px;
-  right: 50px;
-}
-
-/*sandwich menu*/
-
-.nav-b {
-  --color: #000000; 
-  z-index: 9999;
-  background: none;
-  height: 40px;
-  width: 50px;
-  top: 20;
-  right: 10px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  svg {
-    fill: none;
-    stroke: var(--color);
-    stroke-width: 7px;
-    height: 100%;
-    width: 100%;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    use {
-      &:nth-of-type(1) {
-        opacity: 1;
-        stroke-dashoffset: 221;
-        stroke-dasharray: 46 249;
-        transition: stroke-dashoffset .12s linear .2s, stroke-dasharray .12s linear .2s, opacity 0s linear .2s;  
-      }
-      &:nth-of-type(2) {
-        animation: stroke-animation-reverse 1.2s ease-out forwards;
-      } 
-    }
+    mix-blend-mode: multiply;
   }
-  input {
+
+
+  .square-box {
+    width: 370px;
+    height: 480px;
     position: absolute;
-    height: 120%;
-    width: 120%;
-    z-index: 2;
-    cursor: pointer;
-    opacity: 0;
-    &:checked {
-      + svg {
-        use {
-          &:nth-of-type(1) {
-            stroke-dashoffset: 175;
-            stroke-dasharray: 0 295;
-            opacity: 0;
-            transition: stroke-dashoffset .07s linear .07s, stroke-dasharray .07s linear .07s, opacity 0s linear .14s;  
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .square-box-right-box {
+    width: 300px;
+    height: 756px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container-about-section {
+    min-width: 300px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(232, 220, 204) 10%);
+    border-radius: 0;
+    right: 0;
+    width: 100%;
+    height: 1200px;
+    box-sizing: border-box;
+  }
+
+
+  footer {
+    min-width: 300px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .footer-content p {
+    margin: 5px 0;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-icons img {
+    width: 100%;
+    height: auto;
+  }
+
+  /*resume*/
+  .container-resume {
+    height: 2200px;
+    width: 100%;
+  }
+
+  .container-job {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    height: 450px;
+  }
+
+  .resume-object-1 {
+    top: 40px;
+    left: 60px;
+  }
+
+  .resume-object-2 {
+    top: 72px;
+    left: 60px;
+  }
+
+  .resume-object-3 {
+    top: 105px;
+    left: 60px;
+  }
+
+  .resume-object-4 {
+    top: 140px;
+    left: 60px;
+  }
+
+  .resume-object-5 {
+    top: 170px;
+    left: 60px;
+    right: 60px;
+    overflow-wrap: break-word;
+  }
+
+
+  .resume-object-6 {
+    top: 140px;
+    overflow-wrap: break-word;
+  }
+
+  .container-education {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    height: 450px;
+    margin-top: 720px;
+  }
+
+  .container-skillset-languages {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    margin-top: 1220px;
+    height: 460px;
+  }
+
+  .container-skillset {
+    width: 100%;
+    margin-top: 40px;
+    height: 220px;
+  }
+
+  .container-languages {
+    width: 100%;
+    margin-top: 260px;
+    height: 200px;
+  }
+
+  .skillset li {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .languages li {
+    flex: 0 0 48%;
+    margin-bottom: 10px;
+    right: 60px;
+  }
+
+  .container-skills {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    margin-top: 1730px;
+    height: 400px;
+    position: absolute;
+  }
+
+  .header-skills-1 {
+    top: 30px;
+    right: 50px;
+  }
+
+  .progress-1 {
+    width: 70%;
+    top: 150px;
+  }
+
+  .header-skills-Python {
+    top: 205px;
+    left: 60px;
+  }
+
+  .header-skills-javascrept {
+    top: 290px;
+    left: 60px;
+  }
+
+  .header-skills-rust {
+    top: 115px;
+    left: 60px;
+  }
+
+
+  .progress-2 {
+    width: 70%;
+    top: 238px;
+  }
+
+  .progress-3 {
+    width: 70%;
+    top: 325px;
+  }
+
+
+  .container-education-header {
+    margin-top: 660px;
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+  }
+
+  .container-d-side {
+    margin-top: 80px;
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+  }
+
+  /*project*/
+  .container-projects {
+    height: 2380px;
+  }
+
+  .container-project-page-description {
+    max-width: 400px;
+    width: 65%;
+    min-width: 300px;
+    height: 450px;
+  }
+
+  .container-project-1 {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    height: 600px;
+    margin-top: 300px;
+  }
+
+  .container-project-2 {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    height: 600px;
+    margin-top: 1000px;
+  }
+
+  .container-project-3 {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+    height: 600px;
+    margin-top: 1700px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .project-img-1 {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+  }
+
+  .project-img-1 img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .line-project-1 {
+    margin-top: 30px;
+  }
+
+  .project-name {
+    top: 28px;
+  }
+
+  .project-title {
+    top: 60px;
+  }
+
+  .project-description {
+    position: absolute;
+    top: 115px;
+    left: 50px;
+    right: 50px;
+  }
+
+  /*sandwich menu*/
+
+  .nav-b {
+    --color: #000000;
+    z-index: 9999;
+    background: none;
+    height: 40px;
+    width: 50px;
+    top: 20;
+    right: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: none;
+      stroke: var(--color);
+      stroke-width: 7px;
+      height: 100%;
+      width: 100%;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+      use {
+        &:nth-of-type(1) {
+          opacity: 1;
+          stroke-dashoffset: 221;
+          stroke-dasharray: 46 249;
+          transition: stroke-dashoffset .12s linear .2s, stroke-dasharray .12s linear .2s, opacity 0s linear .2s;
+        }
+
+        &:nth-of-type(2) {
+          animation: stroke-animation-reverse 1.2s ease-out forwards;
+        }
+      }
+    }
+
+    input {
+      position: absolute;
+      height: 120%;
+      width: 120%;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0;
+
+      &:checked {
+        +svg {
+          use {
+            &:nth-of-type(1) {
+              stroke-dashoffset: 175;
+              stroke-dasharray: 0 295;
+              opacity: 0;
+              transition: stroke-dashoffset .07s linear .07s, stroke-dasharray .07s linear .07s, opacity 0s linear .14s;
+            }
+
+            &:nth-of-type(2) {
+              animation: stroke-animation 1.2s ease-out forwards;
+            }
           }
-          &:nth-of-type(2) {
-            animation: stroke-animation 1.2s ease-out forwards;
-          } 
         }
       }
     }
   }
-}
 
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 295;
-    stroke-dasharray: 25 270;
+  @keyframes stroke-animation {
+    0% {
+      stroke-dashoffset: 295;
+      stroke-dasharray: 25 270;
+    }
+
+    50% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
+
+    65% {
+      stroke-dashoffset: 59;
+      stroke-dasharray: 59 236;
+    }
+
+    100% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
   }
-  50% {
-    stroke-dashoffset: 68;
-    stroke-dasharray: 59 236;
+
+  @keyframes stroke-animation-reverse {
+    0% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
+
+    50% {
+      stroke-dashoffset: 290;
+      stroke-dasharray: 25 270;
+    }
+
+    65% {
+      stroke-dashoffset: 295;
+      stroke-dasharray: 25 270;
+    }
+
+    100% {
+      stroke-dashoffset: 290;
+      stroke-dasharray: 25 270;
+    }
   }
-  65% {
-    stroke-dashoffset: 59;
-    stroke-dasharray: 59 236;
+
+  .nav {
+    display: none;
   }
-  100% {
-    stroke-dashoffset: 68;
-    stroke-dasharray: 59 236;
+
+  .nav.open {
+    position: fixed;
+    background-color: rgb(232, 220, 204);
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9991;
   }
-}
 
-@keyframes stroke-animation-reverse {
-  0% {
-    stroke-dashoffset: 68;
-    stroke-dasharray: 59 236;
+
+  .nav ul {
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
-  50% {
-    stroke-dashoffset: 290;
-    stroke-dasharray: 25 270;
+
+  .nav li {
+    display: block;
+    text-align: center;
+    padding: 10px;
   }
-  65% {
-    stroke-dashoffset: 295;
-    stroke-dasharray: 25 270;
+
+  .nav-item {
+    text-align: center;
+
   }
-  100% {
-    stroke-dashoffset: 290;
-    stroke-dasharray: 25 270;
+
+  .nav-link {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
   }
-}
 
-.nav {
-  display: none;
-}
+  /*CONTACT*/
+  .container-contact {
+    height: 1200px;
+  }
 
-.nav.open {
-  position: fixed;
-  background-color: rgb(232,220,204);
-  display: block;
-  animation: fadeIn 0.5s ease-in;
-  justify-content: center; 
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9991;
-}
+  .container-contact-mail {
+    max-width: 450px;
+    width: 80%;
+    min-width: 350px;
+  }
 
+  .container-contact-socialmedia-links {
+    max-width: 450px;
+    width: 100%;
+    min-width: 350px;
+    height: 700px;
+  }
 
-.nav ul {
-  list-style-type: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  padding: 0;
-  text-align: center;
-  justify-content: center;
-  align-items: center; 
-}
+  .mail-contact-linkedin {
+    position: absolute;
+    top: 420px;
+    right: 50%;
+    left: 50%;
+    margin: 0;
+    width: 70%;
+    transform: translate(-50%, -50%);
+  }
 
-.nav li {
-  display: block; 
-  text-align: center; 
-  padding: 10px; 
-}
+  .mail-contact-gitlabes {
+    position: absolute;
+    top: 600px;
+    right: 50%;
+    left: 50%;
+    margin: 0;
+    width: 70%;
+    transform: translate(-50%, -50%);
+  }
 
-.nav-item {
-  text-align: center; 
+  .mail-contact-git {
+    position: absolute;
+    top: 170px;
+    right: 50%;
+    left: 50%;
+    margin: 0;
+    width: 70%;
+    transform: translate(-50%, -50%);
+  }
 
-}
+  .mail-contact-git .mail-contact-object-1 {
+    top: 80px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-.nav-link {
-  text-decoration: none;
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  padding: 10px 15px;
-}
-/*CONTACT*/
-.container-contact-all{
-  max-width: 450px;
-  width: 80%;
-  min-width: 350px;
-}
+  .mail-contact-linkedin .contact-object-3-1 {
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    left: 70%;
+    width: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
 
+  .mail-contact-linkedin .mail-contact-object-2 {
+    position: absolute;
+    top: 35px;
+    right: 50%;
+    left: 70%;
+    width: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
 }
