@@ -1,22 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>I'M DHANUSH</title>
-        <link rel="icon" href="https://repo.dhanush.online/images/portfolio.ico" type="image/x-icon">
-        <meta property="og:title" content="I'm Dhanush">
-        <meta property="og:description" content="I'm a developer. You can learn more about me here.">
-        <meta property="og:image" content="https://repo.dhanush.online/images/portfolio-banner.png">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta property="og:url" content="https://dhanush.online/">
-        <meta property="og:type" content="website">
-        <link rel="stylesheet" href="static/css/styles.css">
-    </head>
-    <body>
 
-        <div class="nav">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'M DHANUSH</title>
+    <link rel="icon" href="https://repo.dhanush.online/images/portfolio.ico" type="image/x-icon">
+    <meta property="og:title" content="I'm Dhanush">
+    <meta property="og:description" content="I'm a developer. You can learn more about me here.">
+    <meta property="og:image" content="https://repo.dhanush.online/images/portfolio-banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://dhanush.online/">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .scene {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .cube-wrapper {
+            transform-style: preserve-3d;
+            animation: bouncing 2s infinite;
+        }
+
+        .cube {
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateZ(45deg);
+            animation: rotation 2s infinite;
+        }
+
+        .cube-faces {
+            transform-style: preserve-3d;
+            height: 80px;
+            /* $size */
+            width: 80px;
+            /* $size */
+            position: relative;
+            transform-origin: 0 0;
+            transform: translateX(0) translateY(0) translateZ(-40px);
+            /* -$size/2 */
+        }
+
+        .cube-face {
+            position: absolute;
+            inset: 0;
+            background: rgb(232, 220, 204);
+            border: solid 1px rgb(0, 0, 255);
+        }
+
+        .cube-face.shadow {
+            transform: translateZ(-80px);
+            animation: bouncing-shadow 2s infinite;
+        }
+
+        .cube-face.top {
+            transform: translateZ(80px);
+        }
+
+        .cube-face.front {
+            transform-origin: 0 50%;
+            transform: rotateY(-90deg);
+        }
+
+        .cube-face.back {
+            transform-origin: 0 50%;
+            transform: rotateY(-90deg) translateZ(-80px);
+        }
+
+        .cube-face.right {
+            transform-origin: 50% 0;
+            transform: rotateX(-90deg) translateY(-80px);
+        }
+
+        .cube-face.left {
+            transform-origin: 50% 0;
+            transform: rotateX(-90deg) translateY(-80px) translateZ(80px);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotateX(45deg) rotateY(0) rotateZ(45deg);
+                animation-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+            }
+
+            50% {
+                transform: rotateX(45deg) rotateY(0) rotateZ(225deg);
+                animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+            }
+
+            100% {
+                transform: rotateX(45deg) rotateY(0) rotateZ(405deg);
+                animation-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+            }
+        }
+
+        @keyframes bouncing {
+            0% {
+                transform: translateY(-40px);
+                /* -$size * .5 */
+                animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+            }
+
+            45% {
+                transform: translateY(40px);
+                /* $size * .5 */
+                animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            100% {
+                transform: translateY(-40px);
+                /* -$size * .5 */
+                animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+            }
+        }
+
+        @keyframes bouncing-shadow {
+            0% {
+                transform: translateZ(-80px) scale(1.3);
+                /* -$size */
+                animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+                opacity: 0.05;
+            }
+
+            45% {
+                transform: translateZ(0);
+                animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateZ(-80px) scale(1.3);
+                /* -$size */
+                animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+                opacity: 0.05;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="msg" style="font-size: largest;" class="center-container">
+        <div class="scene">
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="cube-faces">
+                        <div class="cube-face shadow"></div>
+                        <div class="cube-face bottom"></div>
+                        <div class="cube-face top"></div>
+                        <div class="cube-face left"></div>
+                        <div class="cube-face right"></div>
+                        <div class="cube-face back"></div>
+                        <div class="cube-face front"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body" style="display: none;">
+
+        <div class="nav" id="nav">
             <nav>
                 <ul>
                     <li class="nav-item">
@@ -42,15 +200,16 @@
                 </h1>
             </div>
             <div class="nav-b">
-                <input type="checkbox"/>
+                <input type="checkbox" />
                 <svg>
-                    <use xlink:href="#menu"/>
-                    <use xlink:href="#menu"/>
+                    <use xlink:href="#menu" />
+                    <use xlink:href="#menu" />
                 </svg>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 56" id="menu">
-                    <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
+                    <path
+                        d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4" />
                 </symbol>
             </svg>
         </header>
@@ -61,7 +220,7 @@
                     <div class="square-box">
                         <div class="left-box">
                             <div class="circle">
-                                <img src="https://repo.dhanush.online/images/logo1.png" alt="Image"/>
+                                <img src="https://repo.dhanush.online/images/logo1.png" alt="Image" />
                             </div>
                             <div class="info">
                                 <h1 class="name">Dhanush</h1>
@@ -70,10 +229,18 @@
                             </div>
                             <div class="square-for-icons">
                                 <div class="social-icons-in-square">
-                                    <a href="https://github.com/dhanushl0l"><img src="https://repo.dhanush.online/images/github.png" class="icon" alt="github"></a>
-                                    <a href="https://gitlab.com/dhanu0"><img src="https://repo.dhanush.online/images/gitlab_black.png" class="icon" alt="gitlab"></a>
-                                    <a href="https://www.linkedin.com/in/dhanush-a506b6297/"><img src="https://repo.dhanush.online/images/linkedin-black.png" class="icon" alt="LinkedIn"></a>
-                                    <a href="https://www.instagram.com/i_am_the_bad.one/"><img src="https://repo.dhanush.online/images/instagram-black.png" class="icon" alt="Instagram"></a>
+                                    <a href="https://github.com/dhanushl0l"><img
+                                            src="https://repo.dhanush.online/images/github.png" class="icon"
+                                            alt="github"></a>
+                                    <a href="https://gitlab.com/dhanu0"><img
+                                            src="https://repo.dhanush.online/images/gitlab_black.png" class="icon"
+                                            alt="gitlab"></a>
+                                    <a href="https://www.linkedin.com/in/dhanush-a506b6297/"><img
+                                            src="https://repo.dhanush.online/images/linkedin-black.png" class="icon"
+                                            alt="LinkedIn"></a>
+                                    <a href="https://www.instagram.com/i_am_the_bad.one/"><img
+                                            src="https://repo.dhanush.online/images/instagram-black.png" class="icon"
+                                            alt="Instagram"></a>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +259,17 @@
                                 <button class="about-button-1" onclick="resume">RESUME</button>
                                 <button class="about-button-2" onclick="projucts">PROJECTS</button>
                             </u1>
-                            <p class="paragraph">I'm a passionate developer and tech enthusiast thriving at the intersection of software and hardware. Fascinated by PCs, servers, microcomputers, and cutting-edge electronics, I love exploring, building, and innovating. Whether coding or experimenting with hardware, my work is fueled by a genuine passion for technology and its endless possibilities. Every project pushes boundaries, solves problems, and sparks my curiosity in the ever-evolving tech landscape.</p>
+                            <p class="paragraph">I'm a passionate developer and tech enthusiast thriving at the
+                                intersection
+                                of software and hardware. Fascinated by PCs, servers, microcomputers, and
+                                cutting-edge
+                                electronics, I love exploring, building, and innovating. Whether coding or
+                                experimenting
+                                with hardware, my work is fueled by a genuine passion for technology and its endless
+                                possibilities. Every project pushes boundaries, solves problems, and sparks my
+                                curiosity
+                                in
+                                the ever-evolving tech landscape.</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +281,8 @@
                 <div class="container-d-side">
                     <div class="side-heading">Experience
                     </div>
-                    <a href="https://repo.dhanush.online/documents/dhanush-cv.pdf" class="download-btn">DOWNLOAD CV</a>
+                    <a href="https://repo.dhanush.online/documents/dhanush-cv.pdf" class="download-btn">DOWNLOAD
+                        CV</a>
                 </div>
                 <div class="container-job">
                     <div class="experience">
@@ -116,9 +294,15 @@
                                 <div class="resume-object-4"></div>
                             </div>
                             <div class="resume-object-5">
-                                As a developer, I'm constantly learning and applying my skills to my own project, which I manage through Git. Concurrently, I'm pursuing my engineering studies, deepening my understanding of the field.
+                                As a developer, I'm constantly learning and applying my skills to my own project,
+                                which
+                                I
+                                manage through Git. Concurrently, I'm pursuing my engineering studies, deepening my
+                                understanding of the field.
                                 <div class="resume-object-6">
-                                    As a developer and engineering student, I'm passionate about innovation and continuous learning.
+                                    As a developer and engineering student, I'm passionate about innovation and
+                                    continuous
+                                    learning.
                                 </div>
                             </div>
                         </div>
@@ -138,9 +322,13 @@
                             <div class="resume-object-4">Kuttakuzhi</div>
                         </div>
                         <div class="resume-object-5">
-                            I hold a B.E. in Computer Science from MACET University, and I possess strong communication skills along with a demonstrated ability to be an adaptable and quick learner.
+                            I hold a B.E. in Computer Science from MACET University, and I possess strong
+                            communication
+                            skills along with a demonstrated ability to be an adaptable and quick learner.
                             <div class="resume-object-6">
-                                I'm a quick learner who's not afraid of a challenge, and I thrive in environments where adaptability are key to success
+                                I'm a quick learner who's not afraid of a challenge, and I thrive in environments
+                                where
+                                adaptability are key to success
                             </div>
                         </div>
                     </div>
@@ -151,7 +339,7 @@
                             <div class="header-skillset-languages">Skillset</div>
                             <div class="skillset">
                                 <ul>
-                                    <li>Git  And Linux Server Administration</li>
+                                    <li>Git And Linux Server Administration</li>
                                     <li>UX/UI Design & 3D Modeling</li>
                                     <li>Adaptable & Quick Learner</li>
                                     <li>Assembly and Troubleshooting Hardware</li>
@@ -193,17 +381,29 @@
             <div class="container-projects">
                 <h1 class="title-resume">PROJECTS</h1>
                 <div class="container-project-page-description">
-                    <p class="project-page-description">I'm a passionate developer deeply committed to managing my own open-source projects on Git, continuously honing my skills, and making meaningful contributions to the community.</p>
+                    <p class="project-page-description">I'm a passionate developer deeply committed to managing my
+                        own
+                        open-source projects on Git, continuously honing my skills, and making meaningful
+                        contributions
+                        to
+                        the community.</p>
                 </div>
                 <div class="container-project-1">
                     <div class="line-project-1"></div>
                     <div class="job-info">
                         <div class="project-name">Just share</div>
                         <div class="project-title">Full Stack Developer</div>
-                        <div class="project-description">Built with an emphasis on accessibility, this open-source website utilizes a Python backend to provide a frictionless platform for sharing links and text.  Enjoy the convenience of sharing without the barrier of user logins.
-                            <a href="https://github.com/dhanushl0l/just-share" target="_blank" style="color: blue; text-decoration: none;">view the source</a>
+                        <div class="project-description">Built with an emphasis on accessibility, this open-source
+                            website
+                            utilizes a Python backend to provide a frictionless platform for sharing links and text.
+                            Enjoy
+                            the convenience of sharing without the barrier of user logins.
+                            <a href="https://github.com/dhanushl0l/just-share" target="_blank"
+                                style="color: blue; text-decoration: none;">view the source</a>
                         </div>
-                        <div class="project-img"><img src="https://repo.dhanush.online/images/justshare.png" alt="Image"></div>
+                        <div class="project-img"><img src="https://repo.dhanush.online/images/justshare.png"
+                                alt="Image">
+                        </div>
                     </div>
                 </div>
                 <div class="container-project-2">
@@ -211,10 +411,16 @@
                     <div class="job-info">
                         <div class="project-name">portfolio website</div>
                         <div class="project-title">Developer</div>
-                        <div class="project-description">This modern, open-source portfolio website offers a highly adaptable platform, allowing users to easily edit, and tailor it to their unique needs. The code's simplicity ensures a beginner-friendly experience.
-                            <a href="https://github.com/dhanushl0l/my-portfolio" target="_blank" style="color: blue; text-decoration: none;">view the source</a>
+                        <div class="project-description">This modern, open-source portfolio website offers a highly
+                            adaptable platform, allowing users to easily edit, and tailor it to their unique needs.
+                            The
+                            code's simplicity ensures a beginner-friendly experience.
+                            <a href="https://github.com/dhanushl0l/my-portfolio" target="_blank"
+                                style="color: blue; text-decoration: none;">view the source</a>
                         </div>
-                        <div class="project-img"><img src="https://repo.dhanush.online/images/portfolio.png" alt="Image"></div>
+                        <div class="project-img"><img src="https://repo.dhanush.online/images/portfolio.png"
+                                alt="Image">
+                        </div>
                     </div>
                 </div>
                 <div class="container-project-3">
@@ -222,10 +428,15 @@
                     <div class="job-info">
                         <div class="project-name">Firefox Extension's</div>
                         <div class="project-title">Developer</div>
-                        <div class="project-description">Firefox extension designed to enhance window management, enabling easy window resizing, arrangement, and workspace saving.
-                            <a href="https://addons.mozilla.org/en-US/firefox/user/18029308/" target="_blank" style="color: blue; text-decoration: none;">view in mozilla store</a>
+                        <div class="project-description">Firefox extension designed to enhance window management,
+                            enabling
+                            easy window resizing, arrangement, and workspace saving.
+                            <a href="https://addons.mozilla.org/en-US/firefox/user/18029308/" target="_blank"
+                                style="color: blue; text-decoration: none;">view in mozilla store</a>
                         </div>
-                        <div class="project-img-1"><img src="https://repo.dhanush.online/images/extensions.png" alt="Image"></div>
+                        <div class="project-img-1"><img src="https://repo.dhanush.online/images/extensions.png"
+                                alt="Image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -244,29 +455,32 @@
                     <div class="container-contact-socialmedia-links">
                         <div class="mail-contact-git">
                             <div class="mail-contact-object-1">
-                                <img src="https://repo.dhanush.online/images/github.png" alt="GitHub Icon"/>
+                                <img src="https://repo.dhanush.online/images/github.png" alt="GitHub Icon" />
                             </div>
                             <div class="mail-contact-object-2">Github</div>
-                            <div class="mail-contact-object-3 contact-object-3-1" onclick="window.open('https://github.com/dhanushl0l', '_blank')">
+                            <div class="mail-contact-object-3 contact-object-3-1"
+                                onclick="window.open('https://github.com/dhanushl0l', '_blank')">
                                 dhanushl0l
                             </div>
                         </div>
 
                         <div class="mail-contact-linkedin">
                             <div class="mail-contact-object-1">
-                                <img src="https://repo.dhanush.online/images/linkedin.png" alt="LinkedIn Icon"/>
+                                <img src="https://repo.dhanush.online/images/linkedin.png" alt="LinkedIn Icon" />
                             </div>
                             <div class="mail-contact-object-2">LinkedIn</div>
-                            <div class="mail-contact-object-3 contact-object-3-1" onclick="window.open('https://linkedin.com/in/dhanu-dev', '_blank')">
+                            <div class="mail-contact-object-3 contact-object-3-1"
+                                onclick="window.open('https://linkedin.com/in/dhanu-dev', '_blank')">
                                 dhanushl0l
                             </div>
                         </div>
                         <div class="mail-contact-linkedin mail-contact-gitlabes">
                             <div class="mail-contact-object-1">
-                                <img src="https://repo.dhanush.online/images/gitlab.png" alt="GitLab Icon"/>
+                                <img src="https://repo.dhanush.online/images/gitlab.png" alt="GitLab Icon" />
                             </div>
                             <div class="mail-contact-object-2">Gitlab</div>
-                            <div class="mail-contact-object-3 contact-object-3-1" onclick="window.open('https://gitlab.com/dhanu0', '_blank')">
+                            <div class="mail-contact-object-3 contact-object-3-1"
+                                onclick="window.open('https://gitlab.com/dhanu0', '_blank')">
                                 dhanu0
                             </div>
                         </div>
@@ -309,6 +523,15 @@
                 </div>
             </div>
         </footer>
-        <script src="/static/js/script.js"></script>
-    </body>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(window).on("load", function () {
+            $('#body').show();
+            $('#msg').hide();
+        });
+    </script>
+    <script src="/static/js/script.js"></script>
+</body>
+
 </html>

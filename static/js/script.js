@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add 'active' class to the target section
     targetSection.classList.add("active");
 
-    // Scroll to the target section smoothly, considering header height
+    // Get the header height
+    const headerHeight = document.querySelector("header").offsetHeight; // Adjust selector as necessary
+
+    // Scroll to the target section
     window.scrollTo({
       top: targetSection.offsetTop - headerHeight,
       behavior: "smooth",
