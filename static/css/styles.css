@@ -277,7 +277,7 @@ a.about-me p {
   background-color: rgb(232, 220, 204);
   border-radius: 0px;
   width: 45vw;
-  height: 900px;
+  height: 95vh;
   box-sizing: border-box;
 }
 
@@ -285,7 +285,7 @@ a.about-me p {
   width: 1100px;
   height: 378px;
   position: absolute;
-  top: 500px;
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
